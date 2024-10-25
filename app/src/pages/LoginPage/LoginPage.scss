@@ -1,0 +1,109 @@
+.main_wrapper{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.back_image {
+	display: grid;
+	grid-template-columns: 60% 40%;
+	position: absolute;
+}
+
+.rectangle_left_top {
+	position: absolute;
+	right: 45%;
+	top: 5%;
+}
+
+.line_left_top{
+	position: absolute;
+	left:25% ;
+	top: 20%;
+	z-index: 40;
+}
+
+.big_train{
+	position: absolute;
+	top: 33%;
+	left: 8%;
+	z-index: 40;
+}
+
+.rectangle_right_top {
+	position: absolute;
+	right: 25%;
+	top: 5%;
+}
+
+.rectangle_left_bottom {
+	position: absolute;
+	bottom: 5%;
+	left: 25%;
+}
+
+.line_left_bottom {
+	position: absolute;
+	bottom: 35%;
+	left: 15%;
+}
+
+.small_train {
+	position: absolute;
+	right: 15%;
+	bottom: 30%;
+}
+
+.line_right_bottom {
+	position: absolute;
+	bottom: 20%;
+	right: 25%;
+	z-index: 40;
+
+}
+
+.subtract {
+	position: relative;
+	padding-bottom: 55px;
+	z-index: 20;
+}
+
+.ellipse {
+	position: absolute;
+	right: 35%;
+	bottom: 10%;
+}
+
+.form_wrapper {
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	transform: translate(60%, -50%);
+	align-items: end;
+	z-index: 50;
+
+}
+
+.login_form {
+	width: 400px;
+	height: 550px;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	background-color:white;
+	box-shadow: inset;
+	z-index: 60;
+}
+
+
+
+.tree {
+	position: absolute;
+	right: 27%;
+	top: 20%;
+	width:12%;
+
+}
