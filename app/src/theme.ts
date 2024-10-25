@@ -5,37 +5,60 @@ import { createTheme } from '@mui/material/styles';
 
 declare module '@mui/material/styles' {
 	interface Palette {
-		tertiary?: Palette['primary'];
+		blueGray: Palette['primary'];
 	}
 
 	interface PaletteOptions {
-		tertiary?: PaletteOptions['primary'];
+		blueGray?: PaletteOptions['primary'];
 	}
 }
 
-export const themeSettings = () => {
+declare module '@mui/material/styles' {
+	interface Palette {
+		greenAccent: Palette['primary'];
+	}
 
-};
+	interface PaletteOptions {
+		greenAccent?: PaletteOptions['primary'];
+	}
+}
 
-export const theme = createTheme({
+export let theme = createTheme({});
+
+theme = createTheme({
 	palette: {
 		primary: {
 			main: '#E21A1A',
 		},
+
 		secondary: {
-			main: '#19857b',
+			main: '#e6e6e6',
+			dark: '#8e8989',
 		},
-		tertiary: {
-			main: '#ff0000',
-		},
-		grey: {
-			500: '#9e9e9e',
+
+		blueGray: theme.palette.augmentColor({
+			color: {
+				main: '#687a8c',
+			},
+			name: 'blueGray',
+		}),
+
+		greenAccent: theme.palette.augmentColor({
+			color: {
+				main: '#01b456',
+			},
+			name: 'greenAccent',
+		}),
+
+		common: {
+			white: '#ffffff',
+			black: '#000000',
 		},
 	},
 
 	typography: {
 		fontFamily: '"RRG", "Roboto", "Helvetica", "Arial", sans-serif',
-		fontSize: 12,
+		fontSize: 16,
 
 		h1: {
 			fontFamily: '"RRG", "Roboto", "Helvetica", "Arial", sans-serif',
@@ -43,27 +66,25 @@ export const theme = createTheme({
 		},
 		h2: {
 			fontFamily: '"RRG", "Roboto", "Helvetica", "Arial", sans-serif',
-			fontSize: 42,
+			fontSize: 40,
 		},
 		h3: {
 			fontFamily: '"RRG", "Roboto", "Helvetica", "Arial", sans-serif',
-			fontSize: 42,
+			fontSize: 30,
 		},
 		h4: {
 			fontFamily: '"RRG", "Roboto", "Helvetica", "Arial", sans-serif',
-			fontSize: 42,
+			fontSize: 24,
 		},
 		h5: {
 			fontFamily: '"RRG", "Roboto", "Helvetica", "Arial", sans-serif',
-			fontSize: 42,
+			fontSize: 20,
 		},
 		h6: {
 			fontFamily: '"RRG", "Roboto", "Helvetica", "Arial", sans-serif',
-			fontSize: 42,
+			fontSize: 14,
 		},
-
-
 	},
 
-	// spacing: 8,
+	spacing: 10,
 });
