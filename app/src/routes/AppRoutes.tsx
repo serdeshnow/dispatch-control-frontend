@@ -4,10 +4,11 @@ import {
 	LoginPage,
 	MainLayout,
 	MonitoringPage,
-	ReportPage,
 	ReportsPage,
 } from '../pages';
+import {ReportPage} from '../pages/ReportsPage/ReportPage/ReportPage'
 import { Header } from '../components';
+import { CalendarDayPage } from '../pages/CalendarDayPage/CalendarDayPage';
 
 export const AppRoutes = () => {
 	return (
@@ -20,6 +21,7 @@ export const AppRoutes = () => {
 				<Route path="reports" element={<ReportsPage/>}>
 					<Route path=":date" element={<ReportPage/>}/>
 				</Route >
+				<Route path="calendar" element={<CalendarDayPage/>}/>
 			</Route>
 			{/*<Route path="*" element={<NotFoundPage/>}/>*/}
 		</Routes>

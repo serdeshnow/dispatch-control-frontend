@@ -7,7 +7,7 @@ import { MonitoringPaper } from '../../components/Dashboard/MonitoringPaper/Moni
 export const DashboardPage = () => {
 	return (
 		<Container sx={{display:"flex", gap:2, my:'auto'}}>
-				<CalendarPaper />
+				<CalendarPaper hasButton={true} onDateSelect={(date: string) => `/reports/${date}`}/>
 				<MonitoringPaper/>
 				<PersonalInformationPaper hasButton={false}/>
 		</Container>
