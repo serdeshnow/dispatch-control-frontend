@@ -27,6 +27,9 @@ style=for-the-badge&logo=data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBD
     <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/>
     <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white"/>
     <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"/>
+    <img src="https://img.shields.io/badge/OpenCV-20232A?style=for-the-badge&logo=opencv&logoColor=5C3EE8"/>
+    <img src="https://img.shields.io/badge/tesseract-1c6ac2?style=for-the-badge"/>
+    <img src="https://img.shields.io/badge/yolo_v11-7B23B3?style=for-the-badge"/>
 </div>
 
 # Цель проекта
@@ -56,7 +59,14 @@ style=for-the-badge&logo=data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBD
   - [x] Внедрение модели
   - [x] Генерация текста на основе запроса
   - [ ] Составление краткого отчета на основе данных
+     
+- [ ] Анализ видео в потоке  
         
-- [ ] Статистика
-  - [ ] Отслеживание лайков и просмотров
-  - [ ] Аналитика
+- [x] Статистика
+- [x] Аналитика
+- [ ] Детекция:
+ - [x] Разметка train dataset
+ - [x] Fine-tuning YOLO-v11  на 1к train_dataset
+ - [x] Fine-tuning YOLO-v11  на 6к train_dataset
+ - [ ] OCR (tesseract)
+ - [ ] Формирование логов
