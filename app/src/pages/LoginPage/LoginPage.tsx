@@ -9,11 +9,12 @@ import rectangle_left_top from '../../assets/svg/RectangleLeftTop.svg';
 import rectangle_right_top from '../../assets/svg/RectangleRightTop.svg';
 import small_train from '../../assets/svg/smallTrain.svg';
 import tree from '../../assets/svg/Tree.svg';
-import subtract from '../../assets/svg/Subtract.svg';
+import subtracts from '../../assets/svg/Subtract.svg';
+import { TextField, Typography } from '@mui/material';
 
 export const LoginPage = () => {
 	return (
-		<section>
+		<section className='a'>
 			<div className="main_wrapper">
 				<div>
 					<img className="big_train" src={big_train} alt="" />
@@ -29,11 +30,32 @@ export const LoginPage = () => {
 				</div>
 				<div className="form_wrapper">
 					<div className="login_form">
-						<h1 className="title"></h1>
-						<input type="text" className="login_user_name" placeholder="123456@mail.com" />
-						<input type="text" className="login_user_password" placeholder="" />
+						<Typography className='title'
+							id='title'
+							variant='h3'
+							sx={{mt:3}}
+						>
+							Вход в систему
+						</Typography>
+
+						<TextField
+							id='login_user_password'
+							label='Почта'
+							sx={{color:'secondary.main', height:{}}}
+
+						/>
+
+						<TextField
+							id='login_user_name'
+							label='Пароль'
+							type='password'
+							variant='outlined'
+							sx={{color:'secondary.main', height:{}}}
+
+						/>
+
 					</div>
-					<img src={subtract} alt="" className="subtract" />
+					<img src={subtracts} alt="" className="subtracts" />
 
 				</div>
 
