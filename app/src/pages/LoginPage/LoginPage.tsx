@@ -10,9 +10,36 @@ import rectangle_right_top from '../../assets/svg/RectangleRightTop.svg';
 import small_train from '../../assets/svg/smallTrain.svg';
 import tree from '../../assets/svg/Tree.svg';
 import subtracts from '../../assets/svg/Subtract.svg';
+
 import { Button, TextField, Typography } from '@mui/material';
 
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { EMPTY_FORM_DATA, FORM_SCHEME } from "../../constants";
+import type { IFormLogin } from '../../interfaces';
+import { useNavigate } from 'react-router-dom';
+
 export const LoginPage = () => {
+	const navigate = useNavigate();
+
+	// useForm
+	const {
+		register,
+		handleSubmit,
+		reset,
+		formState: { errors },
+	} = useForm<IFormLogin>({
+		defaultValues: EMPTY_FORM_DATA,
+		resolver: yupResolver(FORM_SCHEME),
+	});
+
+	const onSubmit = (formData: IFormLogin) => {
+		navigate('/');
+		reset(EMPTY_FORM_DATA);
+		console.log(formData);
+	};
+
+
 	return (
 		<section className='login'>
 			<div className="main_wrapper">
@@ -30,7 +57,7 @@ export const LoginPage = () => {
 					<img src={subtracts} alt="" className="subtracts" />
 				</div>
 				{/*<div className="form_wrapper">*/}
-					<div className="login_form">
+					<form className="login_form" onSubmit={handleSubmit(onSubmit)}>
 						<Typography className='title'
 						            id='title'
 						            variant='h3'
@@ -40,21 +67,32 @@ export const LoginPage = () => {
 						</Typography>
 
 						<TextField
-							id='login_user_password'
+							id='login_user_email'
 							label='Почта'
-							sx={{ color: 'secondary.main', width:"0.9"}}
+							sx={[{ color: 'secondary.main', width:"0.9", backgroundColor:"common.white",
+
+						}, { '&:autofill': { backgroundColor: 'common.white' } }]}
+							{...register("email")}
+							type="email"
+							name="email"
+							error={!!errors.email}
+							helperText={errors.email?.message}
 
 						/>
 
 						<TextField
-							id='login_user_name'
+							id='login_user_password'
 							label='Пароль'
-							type='password'
 							sx={{ color: 'secondary.main', width:"0.9" }}
+							{...register("password")}
+							type="password"
+							name="password"
+							error={!!errors.password}
+							helperText={errors.password?.message}
 
 						/>
-						<Button className='login__btn' variant="contained" sx={{borderRadius:"10px", px:5 , py:1.5, mt:"auto", mb:3}}>Войти</Button>
-					</div>
+						<Button type="submit" className='login__btn' variant="contained" sx={{borderRadius:"10px", px:5 , py:1.5, mt:"auto", mb:3}}>Войти</Button>
+					</form>
 			</div>
 		</section>
 	);

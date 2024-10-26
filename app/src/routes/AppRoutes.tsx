@@ -1,5 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
-import { DashboardPage, LoginPage, MainLayout, MonitoringPage, ReportPage } from '../pages';
+import {
+	DashboardPage,
+	LoginPage,
+	MainLayout,
+	MonitoringPage,
+	ReportPage,
+	ReportsPage,
+} from '../pages';
 import { Header } from '../components';
 
 export const AppRoutes = () => {
@@ -10,7 +17,9 @@ export const AppRoutes = () => {
 				<Route index element={<DashboardPage/>}/>
 				<Route path="header" element={<Header/>}/>
 				<Route path="monitoring" element={<MonitoringPage/>}/>
-				<Route path="reports" element={<ReportPage/>}/>
+				<Route path="reports" element={<ReportsPage/>}>
+					<Route path=":date" element={<ReportPage/>}/>
+				</Route >
 			</Route>
 			{/*<Route path="*" element={<NotFoundPage/>}/>*/}
 		</Routes>

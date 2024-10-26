@@ -4,6 +4,9 @@
 }
 
 .app-bar {
+	position: fixed;
+	top: 200px;
+	left: 0;
 	display: flex;
 	justify-content: space-between;
 }

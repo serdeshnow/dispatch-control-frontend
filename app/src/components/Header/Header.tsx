@@ -4,41 +4,53 @@ import logo from '../../assets/svg/rgdlogo.svg'
 import headerline from '../../assets/svg/red-line-header.svg'
 import logout from '../../assets/svg/logout.svg'
 import '../../theme'
+import { NavLink, useNavigate } from 'react-router-dom';
 
 
 
 export const Header = () => {
+	const navigate = useNavigate();
+
 	return (
 		<AppBar className='app-bar'
-			sx={{height:"10%", color:"common.white", backgroundColor:"common.white"}}
+			sx={{height:"10vh", position:"sticky", top:0, width:"100%", color:"common.white", backgroundColor:"common.white", mb:"1vh"}}
 		>
 
 			<Toolbar className='toolbar'>
-				<img src={logo} alt="" className="logo" />
-				<Box sx={{display:'flex', gap:3}}>
+				<NavLink to="/">
+					<img src={logo} alt="" className="logo" />
+				</NavLink>
+				<Box sx={{ display: 'flex', gap: 3 }}>
 					<Button
 						variant='text'
 						sx={{color:"common.black"}}
+
 					>
-						Главная
+						<NavLink to="/">
+							Главная
+						</NavLink>
 					</Button>
 
 					<Button
 						variant='text'
 						sx={{color:'common.black'}}
 					>
-						Мониторинг
+						<NavLink to="/monitoring">
+							Мониторинг
+						</NavLink>
 					</Button>
 
 					<Button
 						variant='text'
 						sx={{color:'common.black'}}
 					>
-						Календарь отчетов
+						<NavLink to="/reports">
+							Календарь отчетов
+						</NavLink>
 					</Button>
 				</Box>
 
-				<Button sx={{color:'common.black'}}>
+				<Button sx={{color:'common.black'}} onClick={() => navigate("/login")}>
 					<img src={logout} alt="" />
 				</Button>
 			</Toolbar>

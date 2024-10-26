@@ -4,6 +4,23 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	&::after {
+		content: "";
+		position: absolute;
+		top:50%;
+		//right: 50%;
+		transform: translate(0,-50%);
+		width: 400px;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		box-shadow: 0 0 150px rgba(255, 0, 0, 1);
+		//background-color: #E21A1A;
+		z-index: 10;
+	}
+}
+
+.login__image-wrapper {
+
 }
 
 .back_image {
@@ -267,6 +284,8 @@
 	z-index: 60;
 	align-items: center;
 	padding: 20px;
+
+
 }
 
 
