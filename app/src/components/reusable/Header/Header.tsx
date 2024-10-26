@@ -1,6 +1,6 @@
 import { AppBar, Button, Toolbar, Box } from '@mui/material';
 import './Header.scss'
-import logo from '../../../assets/svg/rgdlogo.svg'
+import logo from '../../../assets/svg/newrgd.svg'
 import headerline from '../../../assets/svg/red-line-header.svg'
 import logout from '../../../assets/svg/logout.svg'
 import '../../../theme.ts'
@@ -48,9 +48,10 @@ export const Header = () => {
 							Календарь отчетов
 						</NavLink>
 					</Button>
+
 				</Box>
 
-				<Button sx={{color:'common.black'}} onClick={() => navigate("/login")}>
+				<Button sx={{color:'common.black', pl:'50%', pb:3.5}} onClick={() => navigate("/login")}>
 					<img src={logout} alt="" />
 				</Button>
 			</Toolbar>
