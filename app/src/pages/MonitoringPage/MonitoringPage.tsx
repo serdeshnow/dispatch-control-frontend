@@ -23,7 +23,7 @@ export const MonitoringPage = () => {
 
 	return (
 		<Grid2 container spacing={2} sx={{ px: 10, mt: 2 }}>
-			<Grid2 size={8}>
+			<Grid2 size={8} >
 				<Container sx={{
 					p: 0,
 					display: 'flex',
@@ -47,6 +47,7 @@ export const MonitoringPage = () => {
 					boxShadow: '5px 5px 15px rgba(0, 0, 0, 0.16)',
 				}}>
 					<CardMedia
+						height='600vh'
 						component="video"
 						image="/path/to/your/video.mp4"
 						autoPlay
@@ -55,9 +56,9 @@ export const MonitoringPage = () => {
 					/>
 				</Box>
 			</Grid2>
-			<Grid2 size={4}>
+			<Grid2 size={4} sx={{display:'flex', justifyContent:'space-between', flexDirection:'column'}}>
 				<Chat/>
-				<Container sx={{
+				<Container sx={{ display:'flex', flexDirection:'column', justifyContent:'flex-start',
 					backgroundColor: 'white',
 					borderRadius: '10px',
 					overflow: 'hidden',
@@ -65,9 +66,10 @@ export const MonitoringPage = () => {
 					boxShadow: '5px 5px 15px rgba(0, 0, 0, 0.16)',
 				}}>
 
-					<Chip label="Текущая информация" sx={{ fontSize: 20, borderRadius: '10px', p: 0 }}
+					<Chip label="Текущая информация" sx={{ alignSelf:'flex-start', fontSize: 20, borderRadius: '10px', p:0 }}
 					      component="h2"
-					      color="error" />
+					      color="error"
+								 />
 					<Divider sx={{ py: 1 }} />
 					<List>
 						<ListItem sx={{
@@ -79,6 +81,31 @@ export const MonitoringPage = () => {
 							p: 0,
 						}}>
 							<Container sx={{ p: 0, display:"flex", gap:1,  }}>
+								<Typography component="span" variant="h6" sx={{ color: 'common.black' }}>
+									Тип:
+								</Typography>
+								<Typography
+									component="p"
+									variant="h6"
+									sx={{ color: 'blueGray.main' }}
+								>
+									погрузочный кран
+								</Typography>
+							</Container>
+							<Container sx={{ p: 0, display:"flex", gap:1 }}>
+								<Typography component="span" variant="h6" sx={{ color: 'common.black' }}>
+									Кол-во:
+								</Typography>
+								<Typography
+									component="p"
+									variant="h6"
+									sx={{ color: 'blueGray.main' }}
+								>
+									1 единица
+								</Typography>
+
+							</Container>
+							<Container sx={{ pt:2, display:"flex", gap:1,  }}>
 								<Typography component="span" variant="h6" sx={{ color: 'common.black' }}>
 									Тип:
 								</Typography>
