@@ -9,7 +9,7 @@ export const DashboardPage = () => {
 		<Container sx={{display:"flex", gap:2, my:'auto'}}>
 				<CalendarPaper />
 				<MonitoringPaper/>
-				<PersonalInformationPaper/>
+				<PersonalInformationPaper hasButton={false}/>
 		</Container>
 	);
 };

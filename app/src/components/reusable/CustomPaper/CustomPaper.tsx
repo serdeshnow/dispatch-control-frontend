@@ -8,31 +8,36 @@ interface CustomPaperProps {
 	children: ReactNode;
 	navigationPath?: string;
 	className?: string;
+	hasButton?: boolean;
 }
 
 export const CustomPaper: React.FC<CustomPaperProps> =
 	({
-    title,
-    children,
-    navigationPath = '/',
-		className="",
-  }) => {
-	const navigate = useNavigate();
+		 title,
+		 children,
+		 navigationPath = '/',
+		 className = '',
+		 hasButton = true,
+	 }) => {
+		const navigate = useNavigate();
 
-	const handleSectionClick = () => {
-		navigate(navigationPath);
+		const handleSectionClick = () => {
+			navigate(navigationPath);
+		};
+
+		return (
+			<Paper className={[className, 'hover--effect'].join(' ')} elevation={3}
+			       sx={{ p: 3, maxWidth: '800px', flexGrow: 1, flexBasis: 1 }}>
+				<Grid2 container justifyContent="space-between" alignItems="center" sx={{ mb: 2, minHeight:52 }}>
+					<Chip label={title} sx={{ fontSize: 20, borderRadius: '10px' }} component="h2"
+					      color="error" />
+					{hasButton && <IconButton onClick={handleSectionClick} color="primary">
+						<img src={arrow_right} alt="Перейти" />
+					</IconButton>}
+
+				</Grid2>
+				<Divider sx={{ my: 2 }} />
+				{children}
+			</Paper>
+		);
 	};
-
-	return (
-		<Paper className={className} elevation={3} sx={{ p:3, maxWidth: '800px', flexGrow:1, flexBasis:1}}>
-			<Grid2 container justifyContent="space-between" alignItems="center" sx={{ mb: 2 }}>
-				<Chip label={title} sx={{fontSize:20, borderRadius:"10px"}} component="h2" color="error" />
-				<IconButton onClick={handleSectionClick} color="primary">
-					<img src={arrow_right} alt="Перейти" />
-				</IconButton>
-			</Grid2>
-			<Divider sx={{ my: 2 }} />
-			{children}
-		</Paper>
-	);
-};

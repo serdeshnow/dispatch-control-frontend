@@ -7,9 +7,10 @@ import '../PersonalInformationPaper/PersonalInformationPaper.scss'
 
 
 
-export const PersonalInformationPaper: React.FC = () => {
+export const PersonalInformationPaper: React.FC<{hasButton:boolean;}> = ({hasButton}) => {
 	return (
 		<CustomPaper
+			hasButton={hasButton}
 			title="Личные данные"
 			// navigationPath='/reports'
 			className="personal__info"

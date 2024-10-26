@@ -4,7 +4,7 @@ import { Calendar } from './Calendar/Calendar.tsx';
 
 export const CalendarPaper: React.FC = () => {
 	return (
-		<CustomPaper title="Календарь событий" navigationPath="/reports">
+		<CustomPaper title="Календарь событий" navigationPath="/reports" className="calendar__paper">
 			<Calendar onDateSelect={(date: string) => `/reports/${date}`} />
 		</CustomPaper>
 	);
