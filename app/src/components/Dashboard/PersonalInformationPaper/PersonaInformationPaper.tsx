@@ -34,7 +34,7 @@ export const PersonalInformationPaper: React.FC<{hasButton:boolean;}> = ({hasBut
 					</Typography>
 					<Typography
 						variant="h6"
-						sx={{color:'blueGreen.main'}}
+						sx={{color:'blueGray.main'}}
 					>
 						Диспетчер
 					</Typography>
@@ -45,20 +45,9 @@ export const PersonalInformationPaper: React.FC<{hasButton:boolean;}> = ({hasBut
 					</Typography>
 					<Typography
 						variant="h6"
-						sx={{color:'blueGreen.main'}}
+						sx={{color:'blueGray.main'}}
 					>
 						example@mail.com
-					</Typography>
-				</ListItem>
-				<ListItem sx={{display:'flex', flexDirection:'row', gap:1}}>
-					<Typography component="span" variant="h6">
-						Смена:
-					</Typography>
-					<Typography
-						variant="h6"
-						sx={{color:'blueGreen.main'}}
-					>
-						Диспетчер
 					</Typography>
 				</ListItem>
 

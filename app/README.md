@@ -9,7 +9,8 @@
 
 ### 1. `>> cd app`
 ### 2. `>> npm i`
-### 3. `>> npm run dev`
+### 3. `>> json-server --watch src/db.json --port 8005`
+### 4. `>> npm run dev`
 
 ## Change list:
 

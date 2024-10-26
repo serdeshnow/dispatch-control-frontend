@@ -8,6 +8,7 @@ export const MonitoringPaper: React.FC = () => {
 		<CustomPaper
 			title="Мониторинг"
 			className="monitoring__paper"
+			navigationPath = '/monitoring'
 		>
 				<img src={backlogo} alt="" className='back-logo' />
 		</CustomPaper>

@@ -34,6 +34,7 @@ theme = createTheme({
 		secondary: {
 			main: '#e6e6e6',
 			dark: '#8e8989',
+			light: '#d9d9d9',
 		},
 
 		blueGray: theme.palette.augmentColor({

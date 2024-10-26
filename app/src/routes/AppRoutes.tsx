@@ -3,7 +3,7 @@ import {
 	DashboardPage,
 	LoginPage,
 	MainLayout,
-	MonitoringPage,
+	MonitoringPage, NotFoundPage,
 	ReportsPage,
 } from '../pages';
 import {ReportPage} from '../pages/ReportsPage/ReportPage/ReportPage'
@@ -23,7 +23,7 @@ export const AppRoutes = () => {
 				</Route >
 				<Route path="calendar" element={<CalendarDayPage/>}/>
 			</Route>
-			{/*<Route path="*" element={<NotFoundPage/>}/>*/}
+			<Route path="*" element={<NotFoundPage/>}/>
 		</Routes>
 	);
 };
