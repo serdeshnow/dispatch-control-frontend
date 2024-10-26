@@ -3,7 +3,7 @@ import {
 	DashboardPage,
 	LoginPage,
 	MainLayout,
-	MonitoringPage,
+	MonitoringPage, NotFoundPage,
 	ReportPage,
 	ReportsPage,
 } from '../pages';
@@ -21,7 +21,7 @@ export const AppRoutes = () => {
 					<Route path=":date" element={<ReportPage/>}/>
 				</Route >
 			</Route>
-			{/*<Route path="*" element={<NotFoundPage/>}/>*/}
+			<Route path="*" element={<NotFoundPage/>}/>
 		</Routes>
 	);
 };
