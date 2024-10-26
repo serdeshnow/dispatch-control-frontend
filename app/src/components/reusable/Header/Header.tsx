@@ -16,42 +16,45 @@ export const Header = () => {
 			sx={{height:"10vh", position:"sticky", top:0, width:"100%", color:"common.white", backgroundColor:"common.white", mb:"1vh"}}
 		>
 
-			<Toolbar className='toolbar'>
-				<NavLink to="/">
-					<img src={logo} alt="" className="logo" />
-				</NavLink>
-				<Box sx={{ display: 'flex', gap: 3 }}>
-					<Button
-						variant='text'
-						sx={{color:"common.black"}}
+			<Toolbar className='toolbar' sx={{ display: 'flex', gap:3, justifyContent:"space-between"}}>
+				<Box sx={{ display: 'flex', gap:3, justifyContent:"space-between"}}>
+					<NavLink to="/">
+						<img src={logo} alt="" className="logo" />
+					</NavLink>
+					<Box sx={{ display: 'flex', gap:3, justifyContent:"space-between"}}>
+						<Button
+							variant='text'
+							sx={{color:"common.black"}}
 
-					>
-						<NavLink to="/">
-							Главная
-						</NavLink>
-					</Button>
+						>
+							<NavLink to="/">
+								Главная
+							</NavLink>
+						</Button>
 
-					<Button
-						variant='text'
-						sx={{color:'common.black'}}
-					>
-						<NavLink to="/monitoring">
-							Мониторинг
-						</NavLink>
-					</Button>
+						<Button
+							variant='text'
+							sx={{color:'common.black'}}
+						>
+							<NavLink to="/monitoring">
+								Мониторинг
+							</NavLink>
+						</Button>
 
-					<Button
-						variant='text'
-						sx={{color:'common.black'}}
-					>
-						<NavLink to="/reports">
-							Календарь отчетов
-						</NavLink>
-					</Button>
+						<Button
+							variant='text'
+							sx={{color:'common.black'}}
+						>
+							<NavLink to="/reports">
+								Календарь отчетов
+							</NavLink>
+						</Button>
 
+					</Box>
 				</Box>
 
-				<Button sx={{color:'common.black', pl:'50%', pb:3.5}} onClick={() => navigate("/login")}>
+
+				<Button sx={{color:'common.black', alignSelf:"self-start"}} onClick={() => navigate("/login")}>
 					<img src={logout} alt="" />
 				</Button>
 			</Toolbar>

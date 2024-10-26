@@ -12,6 +12,7 @@ export const PersonalInformationPaper: React.FC = () => {
 		<CustomPaper
 			title="Личные данные"
 			// navigationPath='/reports'
+			className="personal__info"
 		>
 
 			<Box
