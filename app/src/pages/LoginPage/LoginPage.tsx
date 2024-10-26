@@ -10,11 +10,11 @@ import rectangle_right_top from '../../assets/svg/RectangleRightTop.svg';
 import small_train from '../../assets/svg/smallTrain.svg';
 import tree from '../../assets/svg/Tree.svg';
 import subtracts from '../../assets/svg/Subtract.svg';
-import { TextField, Typography } from '@mui/material';
+import { Button, TextField, Typography } from '@mui/material';
 
 export const LoginPage = () => {
 	return (
-		<section className='a'>
+		<section className='login'>
 			<div className="main_wrapper">
 				<div>
 					<img className="big_train" src={big_train} alt="" />
@@ -27,13 +27,14 @@ export const LoginPage = () => {
 					<img src={rectangle_right_top} alt="" className="rectangle_right_top" />
 					<img src={small_train} alt="" className="small_train" />
 					<img src={tree} alt="" className="tree" />
+					<img src={subtracts} alt="" className="subtracts" />
 				</div>
-				<div className="form_wrapper">
+				{/*<div className="form_wrapper">*/}
 					<div className="login_form">
 						<Typography className='title'
-							id='title'
-							variant='h3'
-							sx={{mt:3}}
+						            id='title'
+						            variant='h3'
+						            sx={{ mt: 3 }}
 						>
 							Вход в систему
 						</Typography>
@@ -41,7 +42,7 @@ export const LoginPage = () => {
 						<TextField
 							id='login_user_password'
 							label='Почта'
-							sx={{color:'secondary.main', height:{}}}
+							sx={{ color: 'secondary.main', width:"0.9"}}
 
 						/>
 
@@ -49,16 +50,11 @@ export const LoginPage = () => {
 							id='login_user_name'
 							label='Пароль'
 							type='password'
-							variant='outlined'
-							sx={{color:'secondary.main', height:{}}}
+							sx={{ color: 'secondary.main', width:"0.9" }}
 
 						/>
-
+						<Button className='login__btn' variant="contained" sx={{borderRadius:"10px", px:5 , py:1.5, mt:"auto", mb:3}}>Войти</Button>
 					</div>
-					<img src={subtracts} alt="" className="subtracts" />
-
-				</div>
-
 			</div>
 		</section>
 	);

@@ -156,7 +156,7 @@
 .small_train {
 	position: absolute;
 	right: 15%;
-	bottom: 30%;
+	bottom: 33%;
 	animation-duration: 1280ms;
   animation-name: small_train;
 }
@@ -195,26 +195,28 @@
 	}
 }
 
+@keyframes subtracts {
+	from {
+		opacity: 0;
+		left: 100px;
+	}
+	to {
+		opacity: 100%;
+		right: 0px;
+	}
+
+}
+
 .subtracts {
 	position: relative;
-	bottom: 55px;
-	top: 30%;
+	top: 270px;
+	left: 183.5%;
 	z-index: 20;
 	animation-duration: 1280ms;
   animation-name: subtracts;
 }
 
-@keyframes subtracts {
-	from {
-		opacity: 0;
-		right: 50%;
-	}
-	to {
-		opacity: 100%;
-		right: 0;
-	}
 
-}
 
 .ellipse {
 	position: absolute;
@@ -239,19 +241,22 @@
 
 }
 
-.form_wrapper {
-	display: flex;
-	flex-direction: row;
-	position: absolute;
-	top: 50%;
-	right: 50%;
-	transform: translate(60%, -50%);
-	align-items: end;
-	z-index: 50;
+//.form_wrapper {
+//	display: flex;
+//	flex-direction: row;
+//	position: absolute;
+//	top: 50%;
+//	right: 50%;
+//	transform: translate(-50%, -50%);
+//	align-items: end;
+//	z-index: 50;
 
-}
+//}
 
 .login_form {
+	position: absolute;
+	top:50%;
+	transform: translate(0%,-50%);
 	width: 400px;
 	height: 550px;
 	border-radius: 20px;
@@ -259,9 +264,9 @@
 	flex-direction: column;
 	gap: 50px;
 	background-color:white;
-	box-shadow: inset;
 	z-index: 60;
 	align-items: center;
+	padding: 20px;
 }
 
 
@@ -319,4 +324,8 @@
 		opacity: 100%;
 	}
 
+}
+
+.login__btn {
+	font-family: "RRG_Ex", 'sans-serif';
 }
