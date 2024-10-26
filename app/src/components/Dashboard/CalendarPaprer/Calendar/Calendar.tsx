@@ -1,13 +1,17 @@
-// import './Calendar.scss';
+import React, { useState } from 'react';
 import { Dayjs } from 'dayjs';
 import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import { useNavigate } from 'react-router-dom';
-import React, { useState } from 'react';
 
-export const Calendar: React.FC = () => {
+interface CalendarProps {
+	onDateSelect: (date: string) => string;
+}
+
+
+export const Calendar: React.FC<CalendarProps> = ({ onDateSelect }) => {
 	const [selectedDate, setSelectedDate] = useState<Dayjs | null>(null);
 	const navigate = useNavigate();
 
@@ -15,7 +19,8 @@ export const Calendar: React.FC = () => {
 		setSelectedDate(date);
 		if (date) {
 			const formattedDate = date.format('YYYY-MM-DD');
-			navigate(`reports/${formattedDate}`);
+			const newPath = onDateSelect(formattedDate);
+			navigate(newPath);
 		}
 	};
 
@@ -25,7 +30,7 @@ export const Calendar: React.FC = () => {
 				<DateCalendar
 					value={selectedDate}
 					onChange={handleDateChange}
-					views={['year', 'day']}
+					views={['year', 'month', 'day']}
 				/>
 			</DemoContainer>
 		</LocalizationProvider>

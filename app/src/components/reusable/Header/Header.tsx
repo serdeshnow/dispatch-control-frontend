@@ -1,9 +1,9 @@
 import { AppBar, Button, Toolbar, Box } from '@mui/material';
 import './Header.scss'
-import logo from '../../assets/svg/rgdlogo.svg'
-import headerline from '../../assets/svg/red-line-header.svg'
-import logout from '../../assets/svg/logout.svg'
-import '../../theme'
+import logo from '../../../assets/svg/rgdlogo.svg'
+import headerline from '../../../assets/svg/red-line-header.svg'
+import logout from '../../../assets/svg/logout.svg'
+import '../../../theme.ts'
 import { NavLink, useNavigate } from 'react-router-dom';
 
 
