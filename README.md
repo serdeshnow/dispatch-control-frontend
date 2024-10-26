@@ -30,6 +30,7 @@ style=for-the-badge&logo=data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBD
     <img src="https://img.shields.io/badge/OpenCV-20232A?style=for-the-badge&logo=opencv&logoColor=5C3EE8"/>
     <img src="https://img.shields.io/badge/tesseract-1c6ac2?style=for-the-badge"/>
     <img src="https://img.shields.io/badge/yolo_v11-7B23B3?style=for-the-badge"/>
+    <img src="https://img.shields.io/badge/yandexgpt-323330?style=for-the-badge"/>
 </div>
 
 # Цель проекта
