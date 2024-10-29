@@ -6,9 +6,9 @@
   <p align="center">
     Безопасность и удобство!
     <br>
-    <a href=""><strong>Презентация »</strong></a>
+    <a href="https://www.figma.com/design/LhwAz5qnplaEUVD8Sysdry/RZD-NN?node-id=0-1&t=vk8Z2Df8Iqu7658J-1" target="_blank"><strong>Презентация »</strong></a>
     <br />
-    <a href=""><strong>Попробовать »</strong></a>
+    <strike><strong>Попробовать »</strong></strike>
     <br />
     </p>
 </div>
